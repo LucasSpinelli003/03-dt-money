@@ -3,32 +3,35 @@ import { Header } from "../../components/Header";
 import { Summary } from "../../components/Summary";
 import { SearchForm } from "./components/SearchForm";
 import { PriceHighlight, TransactionContainer, TrasactionsTable } from "./styles";
+import { formatDistanceToNow } from 'date-fns'
+import { ptBR } from 'date-fns/locale/pt-BR'
 
 interface Transaction {
-    "id":number
-    "description": string
-    "type": "income" | "outcome"
-    "Category": string
-    "price": number
-    "CreateAt": string
+    "id":number,
+    "type":'outcome' | 'income',
+    "description":string,
+    "category":string,
+    "price":number,
+    "createdAt":string
 }
 
+
 export function Transactions (){
-    
+
+
     const [transactions, setTransactions] = useState<Transaction[]>([])
 
-    useEffect(() => {
-        async function loadTransference(){
-            const response =  await fetch('http://localhost:3000/transactions')
-            const data = await response.json()
-    
-           setTransactions(data)
-          }
-        loadTransference()
+    async function datatype(){
+        const resource = await fetch('http://localhost:3333/transactions')
+        const data = await resource.json()
+
+        setTransactions(data)
+      } 
+
+    useEffect(() =>{
+        datatype()
     }, [])
-
-    
-
+   
 
     return( 
     <div>
@@ -40,16 +43,20 @@ export function Transactions (){
         <SearchForm />
             <TrasactionsTable>
                 <tbody>
-                  {transactions.map(transaction => {
-                    return(
-                        <tr key={transaction.id}>
-                            <td width="50%">{transaction.description}</td>
-                            <td> <PriceHighlight variant={transaction.type}>{transaction.price}</PriceHighlight></td>
-                            <td>{transaction.Category}</td>
-                            <td>{transaction.CreateAt}</td>    
-                        </tr>
-                    )
-                  })}
+
+                    {transactions.map((transation) =>{
+                        return (
+                            <tr key={transation.id}>
+                                <td width="50%">{transation.description}</td>
+                                <td>{transation.category}</td>
+                                <td> <PriceHighlight variant={transation.type}>{transation.price}</PriceHighlight></td>
+                                <td>{formatDistanceToNow(new Date(transation.createdAt), {
+                                    addSuffix: true,
+                                    locale: ptBR,})}
+                                </td>
+                            </tr>
+                        )
+                    })}
                 </tbody>
             </TrasactionsTable>
         </TransactionContainer>
