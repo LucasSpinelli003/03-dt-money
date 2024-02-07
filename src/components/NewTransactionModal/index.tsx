@@ -8,7 +8,7 @@ export function NewTransactionModal() {
 
             <Content>
                 <Dialog.Title>Nova Transação</Dialog.Title>
-
+                    
                 <Dialog.Close />    
             </Content>
         </Dialog.Portal>
