@@ -1,28 +1,60 @@
 {
-    "transactions":[
-        {
-            "id":1,
-            "description": "Desenvolvimento de site",
-            "type": "income",
-            "Category": "Venda",
-            "price": 1400,
-            "createdAt": "2024-01-06T14:54:52.125Z"
-        },
-        {
-            "id":2,
-            "description": "Hamburguer",
-            "type":"outcome",
-            "Category": "Alimentação",
-            "price": 50,
-            "createdAt": "2024-02-06T14:50:52.125Z"
-        },
-        {
-            "id":3,
-            "description": "Bebida",
-            "type":"outcome",
-            "Category": "H20",
-            "price": 5.50,
-            "createdAt": "2024-02-07T14:50:52.125Z"
-        }
-]
+  "transactions": [
+    {
+      "id": 1,
+      "description": "Desenvolvimento de site",
+      "type": "income",
+      "category": "Venda",
+      "price": 1400,
+      "createdAt": "2024-01-06T14:54:52.125Z"
+    },
+    {
+      "id": 2,
+      "description": "Hamburguer",
+      "type": "outcome",
+      "category": "Alimentação",
+      "price": 50,
+      "createdAt": "2024-02-06T14:50:52.125Z"
+    },
+    {
+      "id": 3,
+      "description": "Bebida",
+      "type": "outcome",
+      "category": "H20",
+      "price": 5.5,
+      "createdAt": "2024-02-07T14:50:52.125Z"
+    },
+    {
+      "description": "teste",
+      "price": 20,
+      "category": "QA",
+      "type": "outcome",
+      "createdAt": "2024-02-08T18:46:28.647Z",
+      "id": 4
+    },
+    {
+      "description": "parmegiana de frango",
+      "price": 38,
+      "category": "almoço",
+      "type": "income",
+      "createdAt": "2024-02-08T18:49:33.787Z",
+      "id": 5
+    },
+    {
+      "description": "Desenvolvimento do Bucket",
+      "price": 2000,
+      "category": "desenvolvimento",
+      "type": "outcome",
+      "createdAt": "2024-02-08T20:12:27.784Z",
+      "id": 6
+    },
+    {
+      "description": "tetetete",
+      "price": 638,
+      "category": "sad",
+      "type": "income",
+      "createdAt": "2024-02-08T20:18:38.929Z",
+      "id": 7
+    }
+  ]
 }
