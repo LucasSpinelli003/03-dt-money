@@ -55,6 +55,30 @@
       "type": "income",
       "createdAt": "2024-02-08T20:18:38.929Z",
       "id": 7
+    },
+    {
+      "description": "perda",
+      "price": 1,
+      "category": "roubo",
+      "type": "outcome",
+      "createdAt": "2024-02-09T13:35:39.263Z",
+      "id": 8
+    },
+    {
+      "description": "a",
+      "price": 20,
+      "category": "a",
+      "type": "income",
+      "createdAt": "2024-02-09T13:36:07.357Z",
+      "id": 9
+    },
+    {
+      "description": "asd",
+      "price": 123,
+      "category": "asd",
+      "type": "outcome",
+      "createdAt": "2024-02-09T13:45:07.922Z",
+      "id": 10
     }
   ]
 }
